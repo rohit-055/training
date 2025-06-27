@@ -1,0 +1,369 @@
+.p {
+    font-family: math;
+    font-size: 18px;
+}
+.a{
+    font-family: math;
+}
+.h1, h2, h3, h4, h5, h6 {
+    font-family: math;
+}
+.banner_contaner img {
+    width: 100%;
+    max-width: 55%;
+}
+.banner_contaner {
+    text-align: center;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    background-color: darkblue;
+    color: #fff;
+    padding: 5px 30px;
+}   
+.login_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.register {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.login {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.register a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bolder;
+    font-family: math;
+}
+.login a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bolder;
+    font-family: math;
+}
+.main_container {
+    background-color: #e4e4e4;
+    padding: 20px;
+}
+marquee.animation {
+    background: gold;
+    color: red;
+    padding: 25px;
+    font-size: 20px;
+}
+a.info_link {
+    text-decoration: none;
+    cursor: pointer;
+}
+.info_raw {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 0px 20px;
+    color: #000;
+    box-shadow: 2px 2px 2px 2px;
+}
+.tab_box {
+    padding: 0px 25px;
+}
+.first_tab {
+    background: #fff;
+    margin-top: 30px;
+    padding: 1px 0px;
+    display: none;
+}
+li.li_font {
+    padding-bottom: 10px;
+}
+.mystyle {
+  display: block !important ;
+}
+.slider_container {
+    margin-top: 20px;
+}
+.slider_raw {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+button.slick-next.slick-arrow {
+    display: none !important;
+}
+button.slick-prev.slick-arrow {
+    display: none !important;
+}
+ul.slick-dots {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    justify-content: center;
+}
+.slider_item img {
+    width: 100%;
+    height: 90vh;
+}
+.general_container {
+    text-align: center;
+    padding: 4px 0px;
+}
+.general_link {
+    text-decoration: none;
+    cursor: pointer;
+}
+.general_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 0px 20px;
+    color: #000;
+    box-shadow: 2px 2px 2px 2px;
+}
+.general_registor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+}
+.general_tab {
+    background: #fff;
+    margin-top: 30px;
+    padding: 20px 20px;
+    display: none;
+}
+.tabone{
+    display: block;
+}
+.login_h1 {
+    background: darkblue;
+    text-align: center;
+    color: #fff;
+    padding: 1px;
+}
+/*.captcha-container {
+      background: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+      width: 300px;
+      margin: auto;
+      text-align: center;
+    }
+    .captcha-box {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      background: #e0e0e0;
+      padding: 10px;
+      margin-bottom: 10px;
+      user-select: none;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    */
+.forgot_pass {
+    justify-content: center;
+    background: darkblue;
+    text-align: center;
+    padding: 15px;
+    display: grid;
+    gap: 15px;
+}
+.login_section {
+    display: flex;
+    justify-content: center;
+}
+/* .login_sub {
+    display: grid;
+    gap: 20px;
+} */
+input.input_set {
+    padding: 10px 70px;
+    margin-top: -10px;
+}
+input.input_btn {
+    background: darkblue;
+    color: #fff;
+    padding: 10px 50px;
+}
+.login_form {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 3px 11px 11px 1px;
+    padding-bottom: 40px;
+}
+.user_id a {
+    color:darkblue;
+    text-decoration: none;
+}
+.user_id {
+    width: 100%;
+    max-width: 300px;
+    padding: 13px;
+    background: #fff;
+    border-radius: 5px;
+}
+.change_pass a {
+    color: darkblue;
+    text-decoration: none;
+}
+.change_pass {
+    width: 100%;
+    max-width: 300px;
+    padding: 13px;
+    background: #fff;
+    border-radius: 5px;
+}
+.iconrotate svg {
+    transform: rotate(45deg);
+}
+.linksvg {
+    transform: rotate(45deg);
+}
+.infosvg svg {
+    transform: rotate(45deg);
+}
+.keysvg svg{
+    transform: rotate(45deg);
+}
+.registration_main {
+    text-align: center;
+}
+.registration_raw {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 3px 11px 11px 1px;
+    padding-bottom: 30px;
+    text-align: left;
+}
+.reg_first {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0px;
+}
+.reg_btn {
+    text-align: center;
+    margin-top: 15px;
+}
+.courses_container {
+    background: darkblue;
+    padding: 50px 120px;
+}
+.course_box {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    color: #fff;
+    flex-wrap: wrap;
+}
+.first_course {
+    flex: 26%;
+    padding: 30px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+}
+.base_header {
+    display: flex;
+    justify-content: space-between;
+}
+.header_raw img {
+    width: 100%;
+    max-width: 20%;
+}
+.user_container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 40px;
+    color: #fff;
+}
+.base_header {
+    display: flex;
+    justify-content: space-between;
+}
+.base_raw {
+    background: darkblue;
+    padding: 10px 30px;
+}
+.home_link a {
+    color: #fff;
+    text-decoration: none;
+    font-family: math;
+    font-size: 17px;
+}
+.training_first_box {
+    display: inline-grid;
+    gap: 30px;
+    background: darkblue;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 10%;
+}
+a.modules {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 25px 10px;
+    font-weight: 800;
+    background: #94abf4;
+}
+a.modules:hover {
+    background: #fff;
+    color: #000;
+    transition-duration: 0.5s;
+}
+.training_raw {
+    display: flex;
+    gap: 30px;
+}
+.training_sec_box {
+    margin-top: 67px;
+    width: 100%;
+}
+a.traning_tab {
+    text-decoration: none;
+    background: darkblue;
+    color: #fff;
+    padding: 25px 21px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.trainig_btns {
+    display: flex;
+    gap: 30px;
+}
+button.input_btn {
+    color: #fff;
+    background: darkblue;
+    padding: 10px 50px;
+}

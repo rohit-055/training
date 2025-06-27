@@ -1,0 +1,305 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
+    <script src="myscripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<title>Login page</title>
+</head>
+<body>
+	<div class="banner_contaner">
+        <img src="Banner.jpg" alt="">
+    </div>
+    <div class="login_section">
+    <div class="login_form">
+    	<div class="login_h1">
+    		<h2>Login Form</h2>
+    	</div>
+    	<div class="login_sub">
+    		<h4>Login to Fill/Submit</h4>
+    		<h4>Login ID</h4>
+			<form id="loginForm">
+    	 <input class="input_set" type="text" name="text" placeholder="Enter Registration Number"> -->
+			<!-- <input class="input_set" type="text" id="username" name="username" placeholder="Username" required> -->
+    		<!-- <p>Password / ਪਾਸਵਰਡ: *</p> -->
+    		<!-- <input class="input_set" type="password" name="password" placeholder="Enter Password"> -->
+			<!-- <input class="input_set" type="password" id="password" name="password" placeholder="Password" required>
+			<p></p> -->
+    		<!-- <input class="input_btn" type="Submit" name="Submit" placeholder="Submit"> -->
+			<!-- <button class="input_btn" type="submit" placeholder="Submit">Login</button>
+			</form> -->
+    		<!-- <span><p>New?<a href="registration.html">Register Here|</a> Return to <a href="pphqproject.html">Home</a></p></span>
+    	</div> -->
+    	<!-- <div class="forgot_pass">
+    		<div class="user_id">
+    			<a href="">FORGOT USER ID/PASSWORD</a>
+    		</div>
+    		<div class="change_pass">
+    			<a href="">CHANGE PASSWORD</a>
+    		</div>
+    	</div> -->
+
+ <!--    	<div class="captcha-container">
+  <div id="captcha" class="captcha-box"></div>
+  <input type="text" id="captcha-input" placeholder="Enter CAPTCHA">
+  <button onclick="validateCaptcha()">Submit</button>
+  <div class="message" id="message"></div>
+</div> -->
+    <!-- </div>
+    </div>
+</body>
+</html>  -->
+
+
+<!-- <form id="loginForm">
+  <input type="text" id="username" name="username" placeholder="Username" required>
+  <input type="password" id="password" name="password" placeholder="Password" required>
+  <button type="submit">Login</button>
+</form> --> 
+
+
+ <!-- <script>
+import express from 'express';
+import PG from 'pg';
+import bcrypt from 'bcryptjs';
+import session from 'express-session';
+import cors from 'cors';
+
+const app = express();
+const port = 3000;
+
+app.use(express.json());
+app.use(cors());
+app.use(session({
+  secret: 'your-secret-key',
+  resave: false,
+  saveUninitialized: false
+}));
+
+const pool = new PG.Pool({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'trainig_website',
+  password: 'spmucell',
+  port: 5432
+});
+
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+  try {
+    const result = await pool.query('SELECT * FROM users WHERE usrname = $1', [username]);
+    if (result.rows.length > 0) {
+      const user = result.rows[0];
+      const match = await bcrypt.compare(password, user.password);
+      if (match) {
+        req.session.userId = user.id;
+        req.session.username = username;
+        res.json({ success: true, message: 'Login successful', redirect: '/dashboard' });
+      } else {
+        res.json({ success: false, message: 'Invalid credentials' });
+      }
+    } else {
+      res.json({ success: false, message: 'User not found' });
+    }
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Server error' });
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+$(document).ready(function() {
+  $('#loginForm').on('submit', function(e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    const username = $('#username').val();
+    const password = $('#password').val();
+
+    $.ajax({
+      url: 'http://localhost:3000/login',
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify({ username, password }),
+      success: function(response) {
+        if (response.success) {
+          window.location.href = response.redirect;
+        } else {
+          alert(response.message);
+        }
+      },
+      error: function(xhr, status, error) {
+        alert('An error occurred: ' + error);
+      }
+    });
+  });
+});
+</script>  -->
+
+
+
+<!-- new code  -->
+ <script>
+import express from 'express';
+import PG from 'pg';
+import bcrypt from 'bcryptjs';
+import session from 'express-session';
+import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const app = express();
+const port = 3000;
+
+// Middleware
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
+
+app.use(session({
+  secret: 'your-secret-key',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: false,
+    sameSite: 'lax'
+  }
+}));
+
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
+// PostgreSQL connection
+const pool = new PG.Pool({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'training_website',
+  password: 'spmucell',
+  port: 5432
+});
+
+// ✅ Registration Route (hash password before insert)
+app.post('/register', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const hashedPassword = await bcrypt.hash(password, 10);
+    await pool.query(
+      'INSERT INTO users (username, password) VALUES ($1, $2)',
+      [username, hashedPassword]
+    );
+    res.json({ success: true, message: 'User registered successfully' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: 'Registration failed' });
+  }
+});
+
+// ✅ Login Route (compare hashed password)
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+  try {
+    const result = await pool.query('SELECT * FROM users WHERE username = $1', [username]);
+
+    if (result.rows.length === 0) {
+      return res.json({ success: false, message: 'User not found' });
+    }
+
+    const user = result.rows[0];
+    const match = await bcrypt.compare(password, user.password);
+
+    if (!match) {
+      return res.json({ success: false, message: 'Invalid credentials' });
+    }
+
+    req.session.userId = user.id;
+    req.session.username = username;
+
+    return res.json({ success: true, message: 'Login successful', redirect: '/dashboard.html' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: 'Server error' });
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
+</script>
+
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="index.html">
+</head>
+<body>
+  <div class="banner_contaner">
+        <img src="Banner.jpg" alt="">
+    </div>
+  <div class="login_section">
+    <div class="login_form">
+      <h2>Login Form</h2>
+      <form id="loginForm">
+        <p>User Name</p>
+        <input class="input_set" type="text" id="username" name="username" placeholder="Username" required>
+        <p>Password</p>
+        <input class="input_set" type="password" id="password" name="password" placeholder="Password" required>
+        <p></p>
+        <button class="input_btn" type="submit">Login</button>
+      </form>
+      <p>New? <a href="registration.html">Register Here</a> | <a href="pphqproject.html">Home</a></p>
+    </div>
+  </div>
+
+  <script>
+     $(document).ready(function () {
+      $('#loginForm').on('submit', function (e) {
+        e.preventDefault();
+
+        const username = $('#username').val();
+        const password = $('#password').val();
+        console.log(username);
+        console.log(password);
+
+        $.ajax({
+          url: 'http://localhost:3000/login',
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({ username, password }),
+          xhrFields: { withCredentials: true }, // ✅ Send cookies
+          crossDomain: true,                    // ✅ Allow cross-origin
+          success: function (response) {
+            if (response.success) {
+              window.location.href = response.redirect;
+            } else {
+              alert(response.message);
+            }
+          },
+          error: function (xhr, status, error) {
+            console.error('AJAX error:', status, error, xhr.responseText);
+            alert('Login request failed');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
