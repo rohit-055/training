@@ -72,7 +72,7 @@ app.get('/login', (req, res) => res.render('login'));
 //   }
 // });
 
-// Login route
+// Login route navigation
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
