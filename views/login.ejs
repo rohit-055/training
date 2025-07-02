@@ -32,18 +32,22 @@
 
      
     <div class="login_section">
+      <div class="long_sec_img">
+        <img src="/images/Logo_of_Punjab_Police_(India).png">
+      </div>  
         <div class="login_form">
         <h2>Login Form</h2>
         <form id="loginForm" action="/login" method="POST">
-            <p>User Name</p>
-            <input class="input_set" type="text" id="username" name="username" placeholder="Username" required>
-            <p>Password</p>
-            <input class="input_set" type="password" id="password" name="password" placeholder="Password" required>
+          <div class="login_text"><p>User Name</p></div>
+           <input class="input_set" type="text" id="username" name="username" placeholder="Enter Username" required>
+            <div class="login_text"><p>Password</p></div>
+            <input class="input_set" type="password" id="password" name="password" placeholder="Enter Password" required><br>
+            <input type="checkbox" id="admin_login" name="adminlogin">
+            <label for="admin_login">Login As Admin</label>
             <p></p>
             <button class="input_btn" type="submit">Login</button>
         </form>
         <p>New? <a href="registration.html">Register Here</a> | <a href="pphqproject.html">Home</a></p>
-        </div>
     </div>
 
     <!-- <div class="form-wrapper">
@@ -60,5 +64,6 @@
             <button type="submit" class="btn btn-primary">Login</button>
         </form>
     </div> -->
+    </div>
 </body>
 </html>
