@@ -1,0 +1,324 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome, <%= user.username %>!</h2>
+        <p>You are logged in.</p>
+        <p>Current DB server time: <strong><%= now %></strong></p>
+
+        <a href="/logout" class="btn btn-danger">Logout</a>
+    </div>
+</body>
+
+ 
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="myscripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <title>Dashbord Training</title>
+</head>
+<body>
+    <div class="base_container">
+        <div class="base_raw">
+            <div class="base_header">
+                <div class="header_raw">
+                    <img src="/images/Logo_of_Punjab_Police_(India).webp" alt="">
+                </div>
+                <div class="user_container">
+                    <div class="home_link">
+                        <a href="">Home</a>
+                    </div>
+                    <div class="user_name">
+                        <h4> <%= user %> ! </h4>
+                    </div>
+                    <div class="user_img">
+                        <a href="/logout" style="color: white;" class="btn btn-danger">Logout !</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="training_containar">
+        <div class="training_raw">
+            <div class="training_first_box">
+                <a class="modules" href="">Training Modules</a>
+                <!-- <a class="modules" href="">Admin Tab</a> -->
+                <!-- <a class="modules" href="">Dashbord</a> -->
+                <a class="modules" href="">Courses</a>
+                <a class="modules" href="">Quiz</a>
+                <a class="modules" href="loginform.html">Logout</a>
+             </div>
+             <div class="training_sec_box">
+                <div class="trainig_btns">
+                    <div class="tabs_box"> 
+                        <a class="traning_tab" href="">Total Exercises</a> 
+                        <div class="tutorial_box">
+                            <div class="tutorial_img" >
+                                <img src="C8u-yDFWsAIxnJO.jpg" alt="">
+                            </div>
+                            
+                            <h4>CCTNS Tutorial</h4>
+                            <div class="traning_atag">
+                            <a href="CCTNS%20CAS%20-%20MHA.pdf" target="_blank">Tutorial PDF</a>
+                            <a href="#" class="open-video" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Watch Video 1</a>
+                            <a href="">Quiz</a>
+                            <!-- <a href="">Software Training</a> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="tabs_box"> 
+                        <a class="traning_tab" href="">Exercises Complete</a>
+                        <div class="tutorial_box">
+                            <div class="tutorial_img" >
+                                <img src="images.jfif" alt="">
+                            </div>
+                            <h4>ICJS Tutorial</h4>
+                            <div class="traning_atag">
+                            <a href="ICJS-manual.pdf" target="_blank">Tutorial PDF</a>
+                            <a href="#" class="open-video" data-video="https://www.w3schools.com/html/movie.mp4">Watch Video 2</a>
+                            <a href="">Quiz</a>
+                            <!-- <a href="">Software Training</a>  -->
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="tabs_box"> 
+                        <a class="traning_tab" href="">Pending Exercises</a>
+                        <div class="tutorial_box">
+                           <div class="tutorial_img" >
+                                <img src="istockphoto-453569941-612x612.jpg" alt="">
+                            </div>
+                            <h4>Khoj Tutorial</h4>
+                            <div class="traning_atag">
+                            <a href="">Tutorial PDF</a>
+                            <a href="#" class="open-video" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Watch Video 3</a>
+                            <a href="">Quiz</a>
+                            <!-- <a href="">Software Training</a> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="tabs_box"> <a class="traning_tab" href="">Certificate</a>
+                        <div class="tutorial_box">
+                            <div class="tutorial_img" >
+                                <img src="istockphoto-453569941-612x612.jpg" alt="">
+                            </div>
+                            <h4>New Criminal Law Tutorial</h4>
+                            <div class="traning_atag">
+                            <a href="Law of Crimes-I BNS 2024.pdf" target="_blank">Tutorial PDF</a>
+                             <a href="#" class="open-video" data-video="https://www.w3schools.com/html/mov_bbb.mp4">Watch Video 3</a>
+                            <a href="#" id="open-video">Watch Video</a>
+                            <a href="">Quiz</a>
+                            <!-- <a href="">Software Training</a>    -->
+                        </div>
+                          
+                    </div>
+                    </div>
+    <!-- Video popup -->
+  <div class="popup-overlay" id="video-popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-popup">&times;</span>
+      <video controls autoplay id="popup-video">
+        <source src="" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+                </div>
+             </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    .base_raw {
+    background: darkblue;
+    padding: 10px 30px;
+}
+.base_header {
+    display: flex;
+    justify-content: space-between;
+}
+.header_raw img {
+    width: 100%;
+    max-width: 20%;
+}
+.user_container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 40px;
+    color: #fff;
+}
+.home_link a {
+    color: #fff;
+    text-decoration: none;
+    font-family: math;
+    font-size: 17px;
+}
+.user_container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 40px;
+    color: #fff;
+}
+.training_raw {
+    display: flex;
+    gap: 30px;
+}
+.training_first_box {
+    display: inline-grid;
+    gap: 30px;
+    background: darkblue;
+    padding: 40px 20px;
+    width: 100%;
+    max-width:200px;
+}
+a.modules {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 25px 10px;
+    font-weight: 800;
+    background: #94abf4;
+}
+a.modules:hover {
+    background: #fff;
+    color: #000;
+    transition-duration: 0.5s;
+}
+.training_sec_box {
+    margin-top: 40px;
+    width: 100%;
+}
+.trainig_btns {
+    display: flex;
+    gap: 20px;
+}
+a.traning_tab {
+    text-decoration: none;
+    background: darkblue;
+    color: #fff;
+    padding: 25px 21px;
+    font-size: 20px;
+    font-weight: 800;
+}
+/* new css */
+.tabs_box {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    flex: 1 0 0;
+    padding: 10px 10px;
+    border: 2px solid #94abf4;
+}
+
+.traning_atag a {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: darkblue;
+}
+.traning_atag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.tutorial_img img {
+    width: 100%;
+    height: 100%;
+}
+.tabs_box:hover {
+    background: #94abf4;
+    transition-duration: 0.5s;
+}
+/* .tabs_box:hover a {
+    color: #fff;
+} */
+
+
+ /* video css */
+ .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .popup-content {
+      position: relative;
+      background: #000;
+      padding: 0;
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .popup-content video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+</style>
+
+<script>
+    const links = document.querySelectorAll('.open-video');
+    const popup = document.getElementById('video-popup');
+    const closeBtn = document.getElementById('close-popup');
+    const video = document.getElementById('popup-video');
+    const source = video.querySelector('source');
+
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const videoUrl = this.getAttribute('data-video');
+        source.setAttribute('src', videoUrl);
+        video.load(); // Load new video source
+        popup.style.display = 'flex';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      popup.style.display = 'none';
+      video.pause();
+    });
+
+    popup.addEventListener('click', e => {
+      if (e.target === popup) {
+        popup.style.display = 'none';
+        video.pause();
+      }
+    });
+  </script>
