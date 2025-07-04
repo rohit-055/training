@@ -5,7 +5,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link href="/Content/bootstrap.min.css" rel="stylesheet">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
      <title>Punjab Police Training Portal
        </title>
        
@@ -34,22 +35,37 @@
         .Bg-main {
             background-color: #9de9ad; /* Punjab Police Blue */
         }
-        sub-header {
-            background-color: #2c3e50; /* Dark Blue */
+        .sub-header {
+            background: linear-gradient(to right, #f28500, #2e7d32); /* saffron to green */
             color: white;
-            padding: 10px 20px;
             font-size: 14px;
+            font-weight: 500;
+            padding: 8px 20px;
+            display: flex;
+        }   
+
+        .sub-header a {
+          color: white;
+          text-decoration: none;
         }
-        header {
+
+        .sub-header a:hover {
+          text-decoration: underline;
+        }
+        .main header {
             background-color: var(--primary);
             color: white;
-            padding: 1rem 2rem;
+            padding: 20px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
+        .main-header img {
+                height: 50px;
+        }
+
+    
         .logo {
             display: flex;
             align-items: center;
@@ -64,19 +80,26 @@
             display: flex;
             list-style: none;
             gap: 20px;
+            color: #333;
+            font-weight: 500;
+            margin: 0 10px;
+            align-items: right;
         }
         
         nav a {
             color: white;
             text-decoration: none;
             font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
+            padding: 6px 14px;
+            border-radius: 5px;
             transition: all 0.3s ease;
+            background: linear-gradient(to right, #f28500, #2e7d32);
+      
         }
         
         nav a:hover {
             background-color: var(--secondary);
+            text-decoration: underline;
         }
         
         .hero {
@@ -410,40 +433,41 @@
 <body>
     
    
-    <header>
+   <header>
          <!-- SUB HEADER -->
-        <div class="container-fluid px-md-5 px-3 Sub-header shadow py-1 Bg-main">
-        <div class="row">
-            <div class="col-md-6 d-flex flex-wrap">
-                <div class="me-3">
-                    <span>ਪੰਜਾਬ ਸਰਕਾਰ</span>
-                    GOVERNMENT OF PUNJAB
-                </div>
+          <div class="container-fluid py-2" style="background: linear-gradient(to right, #f28500, #2e7d32);">
+              <div class="row align-items-center">
+                  <!-- Left: Punjab Govt Info -->
+                  <div class="col-md-6 d-flex align-items-center flex-wrap">
+                      <div class="me-3">
+                         <span>ਪੰਜਾਬ ਸਰਕਾਰ</span><br />
+                         <strong>GOVERNMENT OF PUNJAB</strong>
+                     </div>
+                     <div>
+                          <span>ਤਕਨੀਕੀ ਸੇਵਾਵਾਂ</span><br />
+                          <strong>TECHNICAL SUPPORT SERVICES</strong>
+                     </div>
+                 </div>
 
-
-                <div>
-                    <span>ਤਕਨੀਕੀ ਸੇਵਾਵਾਂ</span>
-                    TECHNICAL SUPPORT SERVICES
-                </div>
-            </div>
-
-            <div class="col-md-6 d-flex flex-wrap justify-content-md-end align-items-center">
-                <a href="#skipcontent" style="color:white; padding:0 2px 0 2px;">SKIP TO MAIN CONTENT</a>
-                <span class="mx-1 ">|</span>
-                <div><a href="/DigitalPolice/Screen_Reader" style="color:white; padding:0 2px 0 2px;">SCREEN READER ACCESS</a></div>
-                <span>&nbsp;&nbsp;</span><a id="iFont" href="#" style="color:white; padding:0 2px 0 2px;">A+</a>
-                <span class="mx-1 iFont">|</span><a id="rFont" href="#" style="color:white; padding:0 2px 0 2px;">A</a>
-                <span class="mx-1 iFont">|</span><a id="dFont" href="#" style="color:white; padding:0 2px 0 2px;">A-</a>
-
-                
-            </div>
-        </div>
-     </div>
-        <div class="logo">
+                  <!-- Right: Accessibility Controls -->
+                 <div class="col-md-6 d-flex flex-wrap justify-content-md-end align-items-center">
+                 <a href="#skipcontent" class="text-white px-2">SKIP TO MAIN CONTENT</a>
+                 <span class="mx-1">|</span>
+                 <a href="/DigitalPolice/Screen_Reader" class="text-white px-2">SCREEN READER ACCESS</a>
+                 <span class="mx-2">|</span>
+                 <a id="iFont" href="#" class="text-white px-2">A+</a>
+                 <span class="mx-1">|</span>
+                 <a id="rFont" href="#" class="text-white px-2">A</a>
+                 <span class="mx-1">|</span>
+                 <a id="dFont" href="#" class="text-white px-2">A-</a>
+                 </div>
+             </div>
+          </div>
+         <div class="logo">
             <img src="./CCTNS &amp; ICJS Training Portal_files/logo.jpg" alt="Government of Punjab logo with national emblem">
             <h2>PUNJAB POLICE TRAINING PORTAL</h2>
-        </div>
-        <nav>
+         </div>
+         <nav>
             <ul>
                 <li><a href="file:///C:/Users/PPP/Downloads/code%20(2).html#" class="active">Home</a></li>
                 <li><a href="file:///C:/Users/PPP/Downloads/code%20(2).html#about">ABOUT</a></li>
@@ -451,7 +475,7 @@
                 <li><a href="file:///C:/Users/PPP/Downloads/code%20(2).html#icjs">ICJS</a></li>
                 <li><a href="file:///C:/Users/PPP/Downloads/code%20(2).html#certificate">My Certificate</a></li>
             </ul>
-        </nav>
+         </nav>
     </header>
     
     <section class="hero">
