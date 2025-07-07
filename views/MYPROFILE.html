@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS%20&%20ICJS%20Training%20Portal.html# -->
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <title>CCTNS - Punjab Police Training Portal</title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+       </title>
+       
+      <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .watermark-image {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-100%,-13%) rotate(-30deg);
+          opacity: 0.20;
+          background-image: url('C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\logo.png'); /* Change this path */
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 500px;
+          height: 500px;
+          z-index: 9999;
+          pointer-events: none;
+          user-select: none;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .Bg-main {
+            background-color: #9de9ad; /* Punjab Police Blue */
+        }
+        .sub-header {
+            background: linear-gradient(to right, #f28500, #2e7d32); /* saffron to green */
+            color: white;
+            font-size: 8px;
+            font-weight: 500;
+            padding: 8px 20px;
+            display: flex;
+        }   
+
+        .sub-header a {
+          color: white;
+          text-decoration: none;
+        }
+
+        .sub-header a:hover {
+          text-decoration: underline;
+        }
+        .main header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 20px;
+            display: flex;
+            justify-content: space-between;
+         
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .main-header img {
+                height: 50px;
+        }
+
+    
+        .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+}
+        
+        .logo img {
+            height: 88px;
+        }
+        
+        nav ul {
+                display: flex;
+               list-style: none;
+               gap: 17px;
+              color: #333;
+              font-weight: 500;
+              margin: 5px 29px;
+             text-align: right;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: linear-gradient(to right, #f28500, #2e7d32);
+      
+        }
+        
+        nav a:hover {
+            background-color: var(--secondary);
+            text-decoration: underline;
+        }
+        nav a.active {
+            background-color: var(--secondary);
+            color: white;
+        }
+         .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .hero a:hover {
+            color: var(--dark);
+        }  
+        .About-section {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .About-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .About-section-details {
+            background-color: var(--light);
+            color: var(--dark);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .About-section-details h5 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            color: var(--primary);
+        }
+        .About-section-details p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .About-section-details ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .About-section-details ul li {
+            margin-bottom: 0.5rem;
+        }
+         .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .systems {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+        
+        .system-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
+            transition: transform 0.3s ease;
+        }
+        
+        .system-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-body p {
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .tab-container {
+            margin: 2rem 0;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab-btn {
+            padding: 0.8rem 1.5rem;
+            background-color: #f1f1f1;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn.active {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 1.5rem 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        
+        .resource-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem;
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .resource-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+        
+        .quiz-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+        
+        .question {
+            margin-bottom: 2rem;
+        }
+        
+        .options {
+            margin: 1rem 0;
+        }
+        
+        .option {
+            display: block;
+            margin: 0.5rem 0;
+            padding: 0.8rem;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .option:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .option.selected {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background-color: var(--secondary);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .certificate {
+            display: none;
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+        
+        .certificate h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .certificate-content {
+            border: 15px solid #f8f9fa;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .certificate-logo {
+            height: 80px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .certificate-details {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .certificate-name {
+            font-size: 2rem;
+            margin: 1rem 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .certificate-date {
+            margin-top: 1rem;
+            color: #666;
+        }
+        
+        .certificate-signature {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+        }
+         .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .systems {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+        
+        .system-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
+            transition: transform 0.3s ease;
+        }
+        
+        .system-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-body p {
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .tab-container {
+            margin: 2rem 0;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab-btn {
+            padding: 0.8rem 1.5rem;
+            background-color: #f1f1f1;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn.active {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 1.5rem 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        
+        .resource-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem;
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .resource-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+        
+        .quiz-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+        
+        .question {
+            margin-bottom: 2rem;
+        }
+        
+        .options {
+            margin: 1rem 0;
+        }
+        
+        .option {
+            display: block;
+            margin: 0.5rem 0;
+            padding: 0.8rem;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .option:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .option.selected {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background-color: var(--secondary);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .certificate {
+            display: none;
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+        
+        .certificate h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .certificate-content {
+            border: 15px solid #f8f9fa;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .certificate-logo {
+            height: 80px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .certificate-details {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .certificate-name {
+            font-size: 2rem;
+            margin: 1rem 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .certificate-date {
+            margin-top: 1rem;
+            color: #666;
+        }
+        
+        .certificate-signature {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+        }
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            color: var(--dark);
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                padding-left: 0;
+                margin-top: 0;
+            }
+            .logo img {
+                height: 40px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .sub-header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .sub-header a {
+                margin-bottom: 5px;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding-left: 0;
+            }
+            .logo {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .h2, h2 {
+    font-size: 25px;
+}
+.logo li {
+    font-size: 13px;
+}
+.col-md-6.d-flex.align-items-center.flex-wrap {
+    font-size: 13px;
+}
+
+      </style>
+  </head>
+  <body>
+    
+    <div class="watermark-image">
+     <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\logo.png" alt="watermark-image">
+  </div>
+   <header>
+         <!-- SUB HEADER -->
+          <div class="container-fluid py-2" style="background: linear-gradient(to right, #f28500, #2e7d32);">
+              <div class="row align-items-center">
+                  <!-- Left: Punjab Govt Info -->
+                  <div class="col-md-6 d-flex align-items-center flex-wrap" style="gap: 23px;">
+                      <div class="me-3">
+                          
+                         <span style="font-size: 11px;">ਪੰਜਾਬ ਸਰਕਾਰ</span><br>
+                         <strong>GOVERNMENT OF PUNJAB</strong>
+                     </div>
+                     <div>
+                         <span style="font-size: 11px;">ਪੰਜਾਬ ਪੁਲਿਸ</span><br>
+                         <strong>PUNJAB POLICE</strong>
+                        </div>
+                     <div>
+                          <span>ਤਕਨੀਕੀ ਸੇਵਾਵਾਂ</span><br>
+                          <strong>TECHNICAL SUPPORT SERVICES</strong>
+                     </div>
+                 </div>
+
+                  <!-- Right: Accessibility Controls -->
+                 <div class="col-md-6 d-flex flex-wrap justify-content-md-end align-items-center">
+                 <a href="#skipcontent" class="text-white px-2">SKIP TO MAIN CONTENT</a>
+                 <span class="mx-1">|</span>
+                 <a href="/DigitalPolice/Screen_Reader" class="text-white px-2">SCREEN READER ACCESS</a>
+                 <span class="mx-2">|</span>
+                 <a id="iFont" href="#" class="text-white px-2">A+</a>
+                 <span class="mx-1">|</span>
+                 <a id="rFont" href="#" class="text-white px-2">A</a>
+                 <span class="mx-1">|</span>
+                 <a id="dFont" href="#" class="text-white px-2">A-</a>
+                 </div>
+             </div>
+          </div>
+         <div class="logo">
+            <img src="./CCTNS &amp; ICJS Training Portal_files/logo.jpg" alt="Government of Punjab logo with national emblem">
+            <h2>PUNJAB POLICE TRAINING PORTAL</h2>
+             <nav>
+            <ul>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS%20&%20ICJS%20Training%20Portal.html#">Home</a></li>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/About.html"class="active">ABOUT</a></li>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS.html">CCTNS</a></li>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/ICJS.html">ICJS</a></li>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/KHOJ.html">KHOJ</a></li>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/MYPROFILE.html">My Profile</a></li>
+            </ul>
+         </nav> 
+         </div>
+        
+    </header>
+    <section class="hero">
+        <h1>PUNJAB POLICE TRAINING PROGRAM</h1>
+        <p>Comprehensive online training for Crime and Criminal Tracking Network &amp; Systems, Interoperable Criminal Justice System and Khoj</p>
+    </section>
+    <!-- ABOUT SECTION -->
+    <div class="container-fluid ">
+      <div class="row">
+           <div class="col-12 About-section">
+            <h3 class="text-center text-white">My Profile</h3>
+           </div>
+              <div class="col-12 About-section-details">
+                <h5 class="text-center">About CCTNS</h5>
+                <p>The Crime and Criminal Tracking Network &amp; Systems (CCTNS) is a project initiated by the Ministry of Home Affairs, Government of India, to create a comprehensive and integrated system for effective policing in the country. It aims to enhance the efficiency and effectiveness of police departments across India by providing a robust IT infrastructure.</p>
+                <ul>
+                 <li>Real-time crime tracking and information sharing</li>
+                 <li>Improved data management and analysis capabilities</li>
+                 <li>Enhanced coordination among various law enforcement agencies</li>
+                </ul>
+            </div>
+
+
+         

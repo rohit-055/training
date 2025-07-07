@@ -7,7 +7,9 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-     <title>Punjab Police Training Portal
+     <title>CCTNS - Punjab Police Training Portal</title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
        </title>
        
       <style>
@@ -25,8 +27,6 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 13px;
-            
         }
         .watermark-image {
           position: fixed;
@@ -83,30 +83,24 @@
 
     
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            justify-content: space-between;
-            padding: 1px;
-        }
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+}
         
         .logo img {
             height: 88px;
-            padding: 6px;
-            margin: -7px;
         }
         
         nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-            color: #333;
-            font-weight: 500;
-            margin: 0 10px;
-            text-align: right;
-            /* padding-left: 50rem;
-            margin-top: -38px;
-            margin-bottom: -1rem; */
+                display: flex;
+               list-style: none;
+               gap: 17px;
+              color: #333;
+              font-weight: 500;
+              margin: 5px 29px;
+             text-align: right;
         }
         
         nav a {
@@ -124,8 +118,351 @@
             background-color: var(--secondary);
             text-decoration: underline;
         }
+        nav a.active {
+            background-color: var(--secondary);
+            color: white;
+        }
+         .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
         
-        .hero {
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .hero a:hover {
+            color: var(--dark);
+        }  
+        .About-section {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .About-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .About-section-details {
+            background-color: var(--light);
+            color: var(--dark);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .About-section-details h5 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            color: var(--primary);
+        }
+        .About-section-details p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .About-section-details ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .About-section-details ul li {
+            margin-bottom: 0.5rem;
+        }
+         .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .systems {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+        
+        .system-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
+            transition: transform 0.3s ease;
+        }
+        
+        .system-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-body p {
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .tab-container {
+            margin: 2rem 0;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab-btn {
+            padding: 0.8rem 1.5rem;
+            background-color: #f1f1f1;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn.active {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 1.5rem 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        
+        .resource-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem;
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .resource-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+        
+        .quiz-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+        
+        .question {
+            margin-bottom: 2rem;
+        }
+        
+        .options {
+            margin: 1rem 0;
+        }
+        
+        .option {
+            display: block;
+            margin: 0.5rem 0;
+            padding: 0.8rem;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .option:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .option.selected {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background-color: var(--secondary);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .certificate {
+            display: none;
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+        
+        .certificate h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .certificate-content {
+            border: 15px solid #f8f9fa;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .certificate-logo {
+            height: 80px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .certificate-details {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .certificate-name {
+            font-size: 2rem;
+            margin: 1rem 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .certificate-date {
+            margin-top: 1rem;
+            color: #666;
+        }
+        
+        .certificate-signature {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+        }
+         .hero {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             padding: 3rem 2rem;
@@ -401,64 +738,78 @@
             margin-top: 3rem;
         }
         
-        .signature {
-            text-decoration: underline;
-            width: 200px;
-            border-top: 1px solid #333;
-            padding-top: 0.5rem;
-        }
-        
         footer {
             background-color: var(--primary);
             color: white;
             text-align: center;
-            padding: 1.5rem;
-            margin-top: 3rem;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
-        
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            color: var(--dark);
+        }
         @media (max-width: 768px) {
-            .systems {
-                flex-direction: column;
-            }
-            
             nav ul {
-                gap: 10px;
+                flex-direction: column;
+                padding-left: 0;
+                margin-top: 0;
             }
-            
-            nav a {
-                padding: 0.5rem;
-                font-size: 0.9rem;
+            .logo img {
+                height: 40px;
             }
-        }
-        
-        /* Print styles for certificate */
-        @media print {
-            body * {
-                visibility: hidden;
+            .hero h1 {
+                font-size: 2rem;
             }
-            .certificate, .certificate * {
-                visibility: visible;
-            }
-            .certificate {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                border: none;
-                box-shadow: none;
+            .hero p {
+                font-size: 1rem;
             }
         }
-    </style>
-</head>
-<body>
+        @media (max-width: 576px) {
+            .sub-header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .sub-header a {
+                margin-bottom: 5px;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding-left: 0;
+            }
+            .logo {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .h2, h2 {
+    font-size: 25px;
+}
+.logo li {
+    font-size: 13px;
+}
+.col-md-6.d-flex.align-items-center.flex-wrap {
+    font-size: 13px;
+}
+
+      </style>
+  </head>
+  <body>
     
-  <div class="watermark-image">
+    <div class="watermark-image">
      <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\logo.png" alt="watermark-image">
   </div>
-   
    <header>
          <!-- SUB HEADER -->
           <div class="container-fluid py-2" style="background: linear-gradient(to right, #f28500, #2e7d32);">
@@ -479,15 +830,14 @@
                           <strong>TECHNICAL SUPPORT SERVICES</strong>
                      </div>
                  </div>
-                     
 
                   <!-- Right: Accessibility Controls -->
                  <div class="col-md-6 d-flex flex-wrap justify-content-md-end align-items-center">
-                 <a href="#skipcontent" class="text-white px-2">SKIP TO MAIN CONTENT</a>
+                 <a href="#Overview" class="text-white px-2">SKIP TO MAIN CONTENT</a>
                  <span class="mx-1">|</span>
                  <a href="/DigitalPolice/Screen_Reader" class="text-white px-2">SCREEN READER ACCESS</a>
                  <span class="mx-2">|</span>
-                 <a id="iFont" href="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal.html" class="text-white px-2">A+</a>
+                 <a id="iFont" href="#" class="text-white px-2">A+</a>
                  <span class="mx-1">|</span>
                  <a id="rFont" href="#" class="text-white px-2">A</a>
                  <span class="mx-1">|</span>
@@ -498,246 +848,41 @@
          <div class="logo">
             <img src="./CCTNS &amp; ICJS Training Portal_files/logo.jpg" alt="Government of Punjab logo with national emblem">
             <h2>PUNJAB POLICE TRAINING PORTAL</h2>
-              <nav>
+             <nav>
             <ul>
-                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS%20&%20ICJS%20Training%20Portal.html#" class="active">Home</a></li>
-                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/About.html">ABOUT</a></li>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS%20&%20ICJS%20Training%20Portal.html#">Home</a></li>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/About.html"class="active">ABOUT</a></li>
                 <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS.html">CCTNS</a></li>
                 <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/ICJS.html">ICJS</a></li>
                 <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/KHOJ.html">KHOJ</a></li>
                 <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/MYPROFILE.html">My Profile</a></li>
             </ul>
-         </nav>
+         </nav> 
          </div>
-       
+        
     </header>
-    
     <section class="hero">
         <h1>PUNJAB POLICE TRAINING PROGRAM</h1>
         <p>Comprehensive online training for Crime and Criminal Tracking Network &amp; Systems, Interoperable Criminal Justice System and Khoj</p>
     </section>
-
-    <div class="container">
-        <section id="about">
-            <h2>Overview</h2>
-            <p>The Crime and Criminal Tracking Network &amp; Systems (CCTNS) and Interoperable Criminal Justice System (ICJS) are flagship initiatives of the Government of India to modernize policing and streamline criminal justice processes through technology.</p>
-            <p>KHOJ is an initiative by punjab police aimed at enhancing the capabilities of law enforcement agencies in India through advanced technology and data analytics.</p>
-            <div class="systems">
-                <div class="system-card">
-                    <div class="card-header" style="background-color: #3498db;">
-                        CCTNS
-                    </div>
-                    <div class="card-body">
-                        <p>The Crime and Criminal Tracking Network &amp; Systems (CCTNS) aims at creating a comprehensive and integrated system for effective policing through e-Governance.</p>
-                        <p>Key components include:</p>
-                        <ul>
-                            <li>Crime investigation system</li>
-                            <li>Prison management system</li>
-                            <li>Forensic lab integration</li>
-                            <li>Digitization of records</li>
-                            <li>Citizen services portal</li>
-                        </ul>
-                        <a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS.html" class="btn">Start CCTNS Training</a>
-                    </div>
-                </div>
-                
-                <div class="system-card">
-                    <div class="card-header" style="background-color: #e74c3c;">
-                        ICJS
-                    </div>
-                    <div class="card-body">
-                        <p>The Interoperable Criminal Justice System (ICJS) aims to integrate the main pillars of the criminal justice system - Police, Courts, Prisons, Prosecution, and Forensic Labs.</p>
-                        <p>Key features include:</p>
-                        <ul>
-                            <li>Seamless data exchange</li>
-                            <li>Common platform for justice delivery</li>
-                            <li>Electronic case management</li>
-                            <li>Integration with CCTNS</li>
-                            <li>Real-time access to case information</li>
-                        </ul>
-                        <a href="file:///C:/Users/PPP/Documents/GitHub/training/views/ICJS.html" class="btn">Start ICJS Training</a>
-                    </div>
-                </div>
-                 <div class="system-card">
-                    <div class="card-header" style="background-color: #27ae60;">
-                        KHOJ
-                    </div>
-                    <div class="card-body">
-                        <p>The Interoperable Criminal Justice System (ICJS) aims to integrate the main pillars of the criminal justice system - Police, Courts, Prisons, Prosecution, and Forensic Labs.</p>
-                        <p>Key features include:</p>
-                        <ul>
-                            <li>Seamless data exchange</li>
-                            <li>Common platform for justice delivery</li>
-                            <li>Electronic case management</li>
-                            <li>Integration with CCTNS</li>
-                            <li>Real-time access to case information</li>
-                        </ul>
-                        <a href="file:///C:/Users/PPP/Documents/GitHub/training/views/KHOJ.html" class="btn">Start KHOJ Training</a>
-                    </div>
-            </div>
-        </section>
-        
-        <!-- <section id="cctns" class="tab-container">
-            <h2>CCTNS Training</h2>
-            <p>Complete your CCTNS training modules and assessment to become certified.</p>
-            
-            <div class="tab-buttons">
-                <button class="tab-btn active" onclick="openTab('cctns', 'overview')">Overview</button>
-                <button class="tab-btn" onclick="openTab('cctns', 'videos')">Training Videos</button>
-                <button class="tab-btn" onclick="openTab('cctns', 'materials')">Study Materials</button>
-                <button class="tab-btn" onclick="openTab('cctns', 'quiz')">Quiz</button>
-            </div>
-            
-            <div id="cctns-overview" class="tab-content active">
-                <h3>CCTNS Overview</h3>
-                <p>The Crime and Criminal Tracking Network &amp; Systems (CCTNS) is a Mission Mode Project (MMP) under the National e-Governance Plan (NeGP) of the Government of India. It aims to create a comprehensive and integrated system for enhancing the efficiency and effectiveness of policing at the police station level.</p>
-                
-                <div class="video-container">
-                    <iframe src="./CCTNS &amp; ICJS Training Portal_files/9No-FiEInLA.html" allowfullscreen=""></iframe>
-                </div>
-                
-                <h4>Key Objectives</h4>
+    <!-- ABOUT SECTION -->
+    <div class="container-fluid ">
+      <div class="row">
+           <div class="col-12 About-section">
+            <h3 class="text-center text-white">ICJS</h3>
+           </div>
+              <!-- <div class="col-12 About-section-details">
+                <h5 class="text-center">About ICJS</h5>
+                <p>The Crime and Criminal Tracking Network &amp; Systems (CCTNS) is a project initiated by the Ministry of Home Affairs, Government of India, to create a comprehensive and integrated system for effective policing in the country. It aims to enhance the efficiency and effectiveness of police departments across India by providing a robust IT infrastructure.</p>
                 <ul>
-                    <li>Make the Police functioning citizen friendly and transparent</li>
-                    <li>Improve service delivery to the general public</li>
-                    <li>Provide the Investigating Officers tools for investigation and crime detection</li>
-                    <li>Improve the efficiency of police functions through automation</li>
-                    <li>Facilitate interaction and data exchange among police stations, state headquarters and central organizations</li>
-                </ul>
-                
-                <a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS%20&%20ICJS%20Training%20Portal.html#cctns-quiz" class="btn" onclick="openTab('cctns', 'quiz')">Take Assessment</a>
-            </div>
-            
-            <div id="cctns-videos" class="tab-content">
-                <h3>CCTNS Training Videos</h3>
-                <p>Watch these instructional videos to learn about CCTNS implementation and usage:</p>
-                
-                <div class="video-container">
-                    <iframe src="./CCTNS &amp; ICJS Training Portal_files/9No-FiEInLA(1).html" allowfullscreen=""></iframe>
-                </div>
-                <p class="video-title">Introduction to CCTNS</p>
-                
-                <div class="video-container">
-                    <iframe src="./CCTNS &amp; ICJS Training Portal_files/9No-FiEInLA(2).html" allowfullscreen=""></iframe>
-                </div>
-                <p class="video-title">CCTNS Software Walkthrough</p>
-                
-                <div class="video-container">
-                    <iframe src="./CCTNS &amp; ICJS Training Portal_files/9No-FiEInLA(3).html" allowfullscreen=""></iframe>
-                </div>
-                <p class="video-title">Case Registration Process</p>
-            </div>
-            
-            <div id="cctns-materials" class="tab-content">
-                <h3>CCTNS Study Materials</h3>
-                <p>Download these resources for detailed information about CCTNS:</p>
-                
-                <div class="resource-card">
-                    <div class="resource-icon">📄</div>
-                    <div>
-                        <h4>CCTNS User Manual</h4>
-                        <p>Complete guide to using the CCTNS software</p>
-                        <a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS%20&%20ICJS%20Training%20Portal.html#" class="btn btn-outline">Download PDF</a>
-                    </div>
-                </div>
-                
-                <div class="resource-card">
-                    <div class="resource-icon">📄</div>
-                    <div>
-                        <h4>CCTNS Implementation Guidelines</h4>
-                        <p>Technical specifications and implementation standards</p>
-                        <a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS%20&%20ICJS%20Training%20Portal.html#" class="btn btn-outline">Download PDF</a>
-                    </div>
-                </div>
-                
-                <div class="resource-card">
-                    <div class="resource-icon">📄</div>
-                    <div>
-                        <h4>CCTNS FAQs</h4>
-                        <p>Frequently asked questions about the system</p>
-                        <a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS%20&%20ICJS%20Training%20Portal.html#" class="btn btn-outline">Download PDF</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="cctns-quiz" class="tab-content quiz-container">
-                <h3>CCTNS QUIZ </h3>
-                <p>Test your knowledge of CCTNS. Score more than 75% to receive your certification.</p>
-                <div class="progress-bar">
-                    <div class="progress" id="cctns-progress"></div>
-                </div>
-                
-                <form id="cctns-quiz-form">
-                    <div class="question">
-                        <h4>1. What does CCTNS stand for?</h4>
-                        <div class="options">
-                            <label class="option"><input type="radio" name="q1" value="a"> Central Criminal Tracking and Notification System</label>
-                            <label class="option"><input type="radio" name="q1" value="b"> Crime and Criminal Tracking Network &amp; Systems</label>
-                            <label class="option"><input type="radio" name="q1" value="c"> Criminal Cases Tracking and Notification Service</label>
-                            <label class="option"><input type="radio" name="q1" value="d"> Centralized Crime Tracking Network System</label>
-                        </div>
-                        <div class="feedback"></div>
-                    </div>
-                    
-                    <div class="question">
-                        <h4>2. Which of the following is NOT an objective of CCTNS?</h4>
-                        <div class="options">
-                            <label class="option"><input type="radio" name="q2" value="a"> Make police functioning citizen-friendly</label>
-                            <label class="option"><input type="radio" name="q2" value="b"> Improve efficiency through automation</label>
-                            <label class="option"><input type="radio" name="q2" value="c"> Replace human police officers with AI systems</label>
-                            <label class="option"><input type="radio" name="q2" value="d"> Facilitate interaction among police stations</label>
-                        </div>
-                        <div class="feedback"></div>
-                    </div>
-                    
-                    <div class="question">
-                        <h4>3. What is the primary benefit of CCTNS integration with ICJS?</h4>
-                        <div class="options">
-                            <label class="option"><input type="radio" name="q3" value="a"> Automates court judgments</label>
-                            <label class="option"><input type="radio" name="q3" value="b"> Seamless data sharing between police and courts</label>
-                            <label class="option"><input type="radio" name="q3" value="c"> Reduces crime rates automatically</label>
-                            <label class="option"><input type="radio" name="q3" value="d"> Eliminates the need for forensic labs</label>
-                        </div>
-                        <div class="feedback"></div>
-                    </div>
-                    
-                    <div class="question">
-                        <h4>4. Which government program is CCTNS part of?</h4>
-                        <div class="options">
-                            <label class="option"><input type="radio" name="q4" value="a"> Digital India</label>
-                            <label class="option"><input type="radio" name="q4" value="b"> National e-Governance Plan</label>
-                            <label class="option"><input type="radio" name="q4" value="c"> Smart Cities Mission</label>
-                            <label class="option"><input type="radio" name="q4" value="d"> Make in India</label>
-                        </div>
-                        <div class="feedback"></div>
-                    </div>
-                    
-                    <button type="button" class="btn" onclick="submitQuiz('cctns')">Submit Quiz</button>
-                </form>
-                
-                <div id="cctns-certificate" class="certificate">
-                    <h2>CERTIFICATE OF COMPLETION</h2>
-                    <div class="certificate-content">
-                        <img src="./CCTNS &amp; ICJS Training Portal_files/466c2538-f9ce-49fb-8b26-da8f1364fc4c.png" alt="CCTNS Training Program Seal" class="certificate-logo">
-                        <div class="certificate-details">
-                            <p>This is to certify that</p>
-                            <p class="certificate-name" id="cctns-cert-name">[Participant Name]</p>
-                            <p>has successfully completed the training program on</p>
-                            <p><strong>Crime and Criminal Tracking Network &amp; Systems (CCTNS)</strong></p>
-                            <p>with a score of <strong id="cctns-cert-score">XX</strong>%</p>
-                            <p class="certificate-date" id="cctns-cert-date">[Date]</p>
-                        </div>
-                        <div class="certificate-signature">
-                            <div class="signature">Training Coordinator</div>
-                            <div class="signature">Director</div>
-                        </div>
-                    </div>
-                    <button onclick="printCertificate('cctns')" class="btn">Print Certificate</button>
-                </div>
-            </div>
-        </section> -->
-        
-        <!-- <section id="icjs" class="tab-container">
+                 <li>Real-time crime tracking and information sharing</li>
+                 <li>Improved data management and analysis capabilities</li>
+                 <li>Enhanced coordination among various law enforcement agencies</li>
+                </ul> -->
+
+
+
+       <section id="icjs" class="tab-container">
             <h2>ICJS Training</h2>
             <p>Complete your ICJS training modules and assessment to become certified.</p>
             
@@ -895,184 +1040,10 @@
                     <button onclick="printCertificate('icjs')" class="btn">Print Certificate</button>
                 </div>
             </div>
-        </section> -->
-        
-       
-        <!-- <section id="khoj" class="tab-container">
-            <h2>KHOJ Training</h2>
-            <p>Complete your KHOJ training modules and assessment to become certified.</p>
-            
-            <div class="tab-buttons">
-                <button class="tab-btn active" onclick="openTab('khoj', 'overview')">Overview</button>
-                <button class="tab-btn" onclick="openTab('khoj', 'videos')">Training Videos</button>
-                <button class="tab-btn" onclick="openTab('khoj', 'materials')">Study Materials</button>
-                <button class="tab-btn" onclick="openTab('khoj', 'quiz')">Quiz</button>
-            </div>
-            
-            <div id="khoj-overview" class="tab-content active">
-                <h3>KHOJ Overview</h3>
-                <p>The KHOJ project is an initiative aimed at enhancing the capabilities of law enforcement agencies through advanced technology and data analytics. It focuses on improving the efficiency and effectiveness of investigations and crime prevention strategies.</p>
-                
-                <div class="video-container">
-                    <iframe src="./CCTNS &amp; ICJS Training Portal_files/9No-FiEInLA.html" allowfullscreen=""></iframe>
-                </div>
-                
-                <h4>Key Objectives</h4>
-                <ul>
-                    <li>Make the Police functioning citizen friendly and transparent</li>
-                    <li>Improve service delivery to the general public</li>
-                    <li>Provide the Investigating Officers tools for investigation and crime detection</li>
-                    <li>Improve the efficiency of police functions through automation</li>
-                    <li>Facilitate interaction and data exchange among police stations, state headquarters and central organizations</li>
-                </ul>
-                
-                <a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS%20&%20ICJS%20Training%20Portal.html#cctns-quiz" class="btn" onclick="openTab('cctns', 'quiz')">Take Assessment</a>
-            </div>
-            
-            <div id="khoj-videos" class="tab-content">
-                <h3>KHOJ Training Videos</h3>
-                <p>Watch these instructional videos to learn about KHOJ implementation and usage:</p>
-                
-                <div class="video-container">
-                    <iframe src="./CCTNS &amp; ICJS Training Portal_files/9No-FiEInLA(1).html" allowfullscreen=""></iframe>
-                </div>
-                <p class="video-title">Introduction to KHOJ</p>
-                
-                <div class="video-container">
-                    <iframe src="./CCTNS &amp; ICJS Training Portal_files/9No-FiEInLA(2).html" allowfullscreen=""></iframe>
-                </div>
-                <p class="video-title">KHOJ Software Walkthrough</p>
-                
-                <div class="video-container">
-                    <iframe src="./CCTNS &amp; ICJS Training Portal_files/9No-FiEInLA(3).html" allowfullscreen=""></iframe>
-                </div>
-                <p class="video-title">Case Registration Process</p>
-            </div>
-            
-            <div id="khoj-materials" class="tab-content">
-                <h3>KHOJ Study Materials</h3>
-                <p>Download these resources for detailed information about CCTNS:</p>
-                
-                <div class="resource-card">
-                    <div class="resource-icon">📄</div>
-                    <div>
-                        <h4>KHOJ User Manual</h4>
-                        <p>Complete guide to using the KHOJ software</p>
-                        <a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS%20&%20ICJS%20Training%20Portal.html#" class="btn btn-outline">Download PDF</a>
-                    </div>
-                </div>
-                
-                <div class="resource-card">
-                    <div class="resource-icon">📄</div>
-                    <div>
-                        <h4>KHOJ Implementation Guidelines</h4>
-                        <p>Technical specifications and implementation standards</p>
-                        <a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS%20&%20ICJS%20Training%20Portal.html#" class="btn btn-outline">Download PDF</a>
-                    </div>
-                </div>
-                
-                <div class="resource-card">
-                    <div class="resource-icon">📄</div>
-                    <div>
-                        <h4>KHOJ FAQs</h4>
-                        <p>Frequently asked questions about the system</p>
-                        <a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS%20&%20ICJS%20Training%20Portal.html#" class="btn btn-outline">Download PDF</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="khoj-quiz" class="tab-content quiz-container">
-                <h3>KHOJ QUIZ </h3>
-                <p>Test your knowledge of KHOJ. Score more than 75% to receive your certification.</p>
-                <div class="progress-bar">
-                    <div class="progress" id="khoj-progress"></div>
-                </div>
-
-                <form id="khoj-quiz-form">
-                    <div class="question">
-                        <h4>1. What does KHOJ stand for?</h4>
-                        <div class="options">
-                            <label class="option"><input type="radio" name="q1" value="a"> Central Criminal Tracking and Notification System</label>
-                            <label class="option"><input type="radio" name="q1" value="b"> Crime and Criminal Tracking Network &amp; Systems</label>
-                            <label class="option"><input type="radio" name="q1" value="c"> Criminal Cases Tracking and Notification Service</label>
-                            <label class="option"><input type="radio" name="q1" value="d"> Centralized Crime Tracking Network System</label>
-                        </div>
-                        <div class="feedback"></div>
-                    </div>
-                    
-                    <div class="question">
-                        <h4>2. Which of the following is NOT an objective of KHOJ?</h4>
-                        <div class="options">
-                            <label class="option"><input type="radio" name="q2" value="a"> Make police functioning citizen-friendly</label>
-                            <label class="option"><input type="radio" name="q2" value="b"> Improve efficiency through automation</label>
-                            <label class="option"><input type="radio" name="q2" value="c"> Replace human police officers with AI systems</label>
-                            <label class="option"><input type="radio" name="q2" value="d"> Facilitate interaction among police stations</label>
-                        </div>
-                        <div class="feedback"></div>
-                    </div>
-                    
-                    <div class="question">
-                        <h4>3. What is the primary benefit of CCTNS integration with ICJS?</h4>
-                        <div class="options">
-                            <label class="option"><input type="radio" name="q3" value="a"> Automates court judgments</label>
-                            <label class="option"><input type="radio" name="q3" value="b"> Seamless data sharing between police and courts</label>
-                            <label class="option"><input type="radio" name="q3" value="c"> Reduces crime rates automatically</label>
-                            <label class="option"><input type="radio" name="q3" value="d"> Eliminates the need for forensic labs</label>
-                        </div>
-                        <div class="feedback"></div>
-                    </div>
-                    
-                    <div class="question">
-                        <h4>4. Which government program is KHOJ part of?</h4>
-                        <div class="options">
-                            <label class="option"><input type="radio" name="q4" value="a"> Digital India</label>
-                            <label class="option"><input type="radio" name="q4" value="b"> National e-Governance Plan</label>
-                            <label class="option"><input type="radio" name="q4" value="c"> Smart Cities Mission</label>
-                            <label class="option"><input type="radio" name="q4" value="d"> Make in India</label>
-                        </div>
-                        <div class="feedback"></div>
-                    </div>
-                    
-                    <button type="button" class="btn" onclick="submitQuiz('cctns')">Submit Quiz</button>
-                </form>
-                
-                <div id="khoj-certificate" class="certificate">
-                    <h2>CERTIFICATE OF COMPLETION</h2>
-                    <div class="certificate-content">
-                        <img src="./CCTNS &amp; ICJS Training Portal_files/466c2538-f9ce-49fb-8b26-da8f1364fc4c.png" alt="KHOJ Training Program Seal" class="certificate-logo">
-                        <div class="certificate-details">
-                            <p>This is to certify that</p>
-                            <p class="certificate-name" id="khoj-cert-name">[Participant Name]</p>
-                            <p>has successfully completed the training program on</p>
-                            <p><strong>Knowledge Hub for Online Judicial Services (KHOJ)</strong></p>
-                            <p>with a score of <strong id="khoj-cert-score">XX</strong>%</p>
-                            <p class="certificate-date" id="khoj-cert-date">[Date]</p>
-                        </div>
-                        <div class="certificate-signature">
-                            <div class="signature">Training Coordinator</div>
-                            <div class="signature">Director</div>
-                        </div>
-                    </div>
-                    <button onclick="printCertificate('khoj')" class="btn">Print Certificate</button>
-                </div>
-            </div>
-        </section> -->
-    <section id="certificate">
-            <div class="tab-container">
-                <h2>My Certificates</h2>
-                <div id="certificates-view">
-                    <p>Complete assessments to unlock certificates</p>
-                    <div id="certificate-list"><p>No certificates earned yet. Complete assessments to unlock certificates.</p></div>
-                </div>
-            </div>
         </section>
-    </div>
-    
-    <footer>
-        <p>© 2025 Punjab Police Training Portal | Government of Punjab</p>
-    </footer>
-    
-    <script>
+
+
+         <script>
         // Tab navigation
         function openTab(system, tabName) {
             const tabButtons = document.querySelectorAll(`#${system} .tab-btn`);
@@ -1220,7 +1191,3 @@
             document.getElementById('exam-date').value = today;
         });
     </script>
-
-
-
-</body></html>
