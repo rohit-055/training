@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - Punjab Police Training Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #3498db;
+      --accent: #e74c3c;
+      --light: #ecf0f1;
+      --dark: #2c3e50;
+      --success: #27ae60;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+     .watermark-image {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-100%,-13%) rotate(-30deg);
+          opacity: 0.20;
+          background-image: url('C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\logo.png'); /* Change this path */
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 500px;
+          height: 500px;
+          z-index: 9999;
+          pointer-events: none;
+          user-select: none;
+ }
+
+    /* Sub Header */
+    .sub-header {
+      background: linear-gradient(to right, #f28500, #2e7d32);
+      color: white;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 8px 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .sub-header a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+
+    .sub-header a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Header */
+    .main-header {
+      background-color: var(--primary);
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .main-header img {
+      height: 60px;
+    }
+
+    .main-header h1 {
+      font-size: 22px;
+      margin: 0;
+    }
+
+    /* Banner */
+    .banner_contaner img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Login/Register Box */
+    .login_box {
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+      margin: 20px;
+    }
+
+    .login_box a {
+      color: white;
+      background: var(--secondary);
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .login_box a:hover {
+      background-color: var(--primary);
+    }
+
+    /* Slider */
+    
+    .slider_container {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.slider_raw {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.slider_item img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Hide arrows */
+button.slick-next.slick-arrow,
+button.slick-prev.slick-arrow {
+  display: none !important;
+}
+
+/* Custom Dots */
+ul.slick-dots {
+  display: flex !important;
+  gap: 30px;
+  list-style: none;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 0;
+}
+
+ul.slick-dots li button:before {
+  color: var(--secondary);
+  font-size: 14px;
+  opacity: 1;
+}
+
+ul.slick-dots li.slick-active button:before {
+  color: var(--primary);
+}
+       /* Courses */
+       .courses_container {
+         display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 30px 20px;
+    }
+
+    .course_box a {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .course_box svg {
+      margin-bottom: 15px;
+      fill: var(--secondary);
+    }
+
+    .course_box h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .course_box p {
+      font-size: 14px;
+    }
+
+    /* Info Tab */
+    .info_container {
+      margin: 40px 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    .info_raw {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .info_raw h3 {
+      color: var(--secondary);
+      margin-bottom: 0;
+    }
+
+    .tab_li ul {
+      padding-left: 20px;
+    }
+
+    .tab_li li {
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 576px) {
+      .courses_container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-header h1 {
+        font-size: 18px;
+      }
+
+      .login_box {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="watermark-image">
+     <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\logo.png" alt="watermark-image">
+  </div>
+
+  <!-- Sub Header -->
+   <!-- SUB HEADER -->
+          <div class="container-fluid py-2" style="background: linear-gradient(to right, #f28500, #2e7d32);">
+              <div class="row align-items-center">
+                  <!-- Left: Punjab Govt Info -->
+                  <div class="col-md-6 d-flex align-items-center flex-wrap" style="gap: 23px;">
+                      <div class="me-3">
+                          
+                         <span style="font-size: 11px;">ਪੰਜਾਬ ਸਰਕਾਰ</span><br>
+                         <strong>GOVERNMENT OF PUNJAB</strong>
+                     </div>
+                     <div>
+                         <span style="font-size: 11px;">ਪੰਜਾਬ ਪੁਲਿਸ</span><br>
+                         <strong>PUNJAB POLICE</strong>
+                        </div>
+                     <div>
+                          <span style="font-size: 11px;">ਤਕਨੀਕੀ ਸੇਵਾਵਾਂ</span><br>
+                          <strong>TECHNICAL SUPPORT SERVICES</strong>
+                     </div>
+                 </div>
+                     
+
+                  <!-- Right: Accessibility Controls -->
+                 <div class="col-md-6 d-flex flex-wrap justify-content-md-end align-items-center">
+                 <a href="#Overview" class="text-white px-2">SKIP TO MAIN CONTENT</a>
+                 <span style="font-size: 11px;" class="mx-1">|</span>
+                 <a href="/DigitalPolice/Screen_Reader" class="text-white px-2">SCREEN READER ACCESS</a>
+                 <span style="font-size: 11px;" class="mx-2">|</span>
+                 <a id="iFont" href="#" class="text-white px-2">A+</a>
+                 <span style="font-size: 11px;" class="mx-1">|</span>
+                 <a id="rFont" href="#" class="text-white px-2">A</a>
+                 <span style="font-size: 11px;" class="mx-1">|</span>
+                 <a id="dFont" href="#" class="text-white px-2">A-</a>
+                 </div>
+             </div>
+          </div>
+  <!-- Main Header -->
+  <div class="main-header">
+    <div class="d-flex align-items-center">
+      <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\logo.jpg" alt="Punjab Police Logo">
+      <h1 class="ms-3">PUNJAB POLICE TRAINING PORTAL</h1>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner_contaner">
+    <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\Banner.jpg" alt="Banner Image">
+  </div>
+
+  <!-- Login/Register -->
+  <div class="login_box">
+    <a href="/registration">REGISTER</a>
+    <a href="/login">LOGIN</a>
+  </div>
+
+  <!-- Marquee -->
+  <marquee class="bg-warning p-2 fw-bold">
+    Welcome to the Punjab Police Training Portal! Here you can access online training courses in CCTNS, ICJS, KHOJ and more. For any assistance, please contact our support team. 
+  </marquee>
+
+  <!-- Slider -->
+  <div class="slider_container">
+    <div class="one-time slider_raw">
+      <div class="slider_item">
+        <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\punjab-police-personnel-seen-during-rehearsals-ahead-1500w-10532431a.jpg" alt="">
+      </div>
+      <div class="slider_item">
+        <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\f01a4e3d2d3c011adb7b3fdcff6dd4e5.webp" alt="">
+      </div>
+      <div class="slider_item">
+        <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\9400012.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Courses -->
+  <div class="courses_container course_box">
+    <a href="#">
+      <svg style="width: 60px; height:60px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="..."/></svg>
+      <h3>Our Courses</h3>
+      <p>Online Punjab Police training courses in CCTNS, ICJS, KHOJ, PRAGATI, and more.</p>
+    </a>
+
+    <a href="#">
+      <svg style="width: 60px; height:60px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="..."/></svg>
+      <h3>Exercises</h3>
+      <p>Interactive activities aligned with learning outcomes using Bloom's Taxonomy.</p>
+    </a>
+
+    <a href="#">
+      <svg style="width: 60px; height:60px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="..."/></svg>
+      <h3>Quiz</h3>
+      <p>Challenge your knowledge in just 5 minutes—get instant feedback!</p>
+    </a>
+  </div>
+
+  <!-- Info Box -->
+  <div class="info_container" onclick="$('#myDIV').slideToggle()">
+    <div class="info_raw">
+      <h3>Important Information</h3>
+      <div>+</div>
+    </div>
+    <div id="myDIV" class="first_tab" style="display: none;">
+      <ul class="tab_li">
+        <li>Fill details to receive User ID and Password.</li>
+        <li>You will receive login details on your registered email/mobile.</li>
+        <li>Use these credentials to complete your application form.</li>
+        <li>Details like Name, DOB, Email can't be changed after registration.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 Punjab Police Training Portal | Government of Punjab
+  </div>
+
+  <!-- Slider JS -->
+  <script>
+    $(document).ready(function(){
+      $('.one-time').slick({
+        dots: true,
+        infinite: true,
+        speed: 900,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 2000
+      });
+    });
+  </script>
+</body>
+</html>

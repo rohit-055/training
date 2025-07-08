@@ -1,0 +1,31 @@
+<!-- public/dashboard.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard</title>
+</head>
+<body>
+  <h1>Welcome to your Dashboard</h1>
+  <p>You are now logged in.</p>
+</body>
+</html>
+<script>
+  // auth middleware
+function requireLogin(req, res, next) {
+  if (req.session.userId) {
+    next();
+  } else {
+    res.redirect('/login.html'); // or wherever your login page is
+  }
+}
+
+// Serve dashboard with auth guard
+app.get('/dashboard.html', requireLogin, (req, res) => {
+  res.sendFile(path.join(process.cwd(), 'public', 'dashboard.html'));
+});
+
+
+
+
+</script>

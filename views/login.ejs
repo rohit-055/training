@@ -37,6 +37,12 @@
       </div>  
         <div class="login_form">
         <h2>Login Form</h2>
+          
+          <% if (typeof errorMsg !== 'undefined' && errorMsg) { %>
+    <div class="alert alert-danger" role="alert">
+       <%= errorMsg %>
+    </div>
+          <% } %>
         <form id="loginForm" action="/login" method="POST">
           <div class="login_text"><p>User Name</p></div>
            <input class="input_set" type="text" id="username" name="username" placeholder="Enter Username" required>
