@@ -247,6 +247,28 @@ ul.slick-dots li.slick-active button:before {
         justify-content: center;
       }
     }
+      .slick-dots li button:before {
+    font-size: 10px;
+    color: #999;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: #000;
+  }
+
+  /* Optional: make custom round dots if you use <span> */
+  .slick-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+
+  .slick-dots li.slick-active .slick-dot {
+    background-color: #000;
+  }
   </style>
 </head>
 <body>
@@ -372,17 +394,20 @@ ul.slick-dots li.slick-active button:before {
   </div>
 
   <!-- Slider JS -->
-  <script>
-    $(document).ready(function(){
-      $('.one-time').slick({
-        dots: true,
-        infinite: true,
-        speed: 900,
-        slidesToShow: 1,
-        autoplay: true,
-        autoplaySpeed: 2000
-      });
+<script>
+  $(document).ready(function(){
+    $('.one-time').slick({
+      dots: true,
+      infinite: true,
+      speed: 900,
+      slidesToShow: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      customPaging: function(slider, i) {
+        return '<span class="slick-dot"></span>'; // creates plain dots
+      }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
