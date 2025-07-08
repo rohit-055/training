@@ -9,7 +9,7 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'views')));
 app.use(session({
   secret: 'your-secret-key',
   resave: false,
@@ -25,7 +25,7 @@ const pool = new Pool({
   user: 'postgres',
   host: 'localhost',
   database: 'trainig_website',
-  password: 'spmucell',
+  password: 'Rohit@123',
   port: 5432
 });
 

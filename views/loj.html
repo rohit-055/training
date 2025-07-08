@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,11 +110,11 @@
       color: white;
     }
   </style>
-</head>
+  </head>
 <body>
-    <div class="watermark-image">
-     <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\logo.png" alt="watermark-image">
-    </div>
+      <div class="watermark-image">
+        <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\logo.png" alt="watermark-image">
+     </div>
 
   <!-- SUB HEADER -->
           <div class="container-fluid py-2" style="background: linear-gradient(to right, #f28500, #2e7d32);">
@@ -154,29 +155,53 @@
   <!-- HEADER -->
   <div class="header-bar">
     <div class="d-flex align-items-center">
-      <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\logo.jpg" alt="Punjab Police Logo">
+      <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\logo1.png" alt="Punjab Police Logo">
       <h4 class="ms-3 mb-0">PUNJAB POLICE TRAINING PORTAL</h4>
     </div>
   </div>
 
   <!-- LOGIN FORM -->
   <div class="login_section">
-    <div class="login_form">
-      <h2>Login</h2>
-      <form id="loginForm">
-        <label for="username">Username</label>
-        <input class="input_set" type="text" id="username" name="username" placeholder="Enter Username" required>
-
-        <label for="password">Password</label>
-        <input class="input_set" type="password" id="password" name="password" placeholder="Enter Password" required>
-
-        <button type="submit" class="input_btn">Login</button>
-      </form>
-      <p class="text-center mt-3">New user? <a href="registration.html">Register Here</a></p>
+      <div class="long_sec_img">
+        <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\logo1.png">
+      </div>  
+        <div class="login_form">
+        <h2>Login Form</h2>
+          
+          <% if (typeof errorMsg !== 'undefined' && errorMsg) { %>
+    <div class="alert alert-danger" role="alert">
+       <%= errorMsg %>
     </div>
-  </div>
+          <% } %>
+        <form id="loginForm" action="/login" method="POST">
+          <div class="login_text"><p>User Name</p></div>
+           <input class="input_set" type="text" id="username" name="username" placeholder="Enter Username" required>
+            <div class="login_text"><p>Password</p></div>
+            <input class="input_set" type="password" id="password" name="password" placeholder="Enter Password" required><br>
+            <input type="checkbox" id="admin_login" name="adminlogin">
+            <label for="admin_login">Login As Admin</label>
+            <p></p>
+            <button class="input_btn" type="submit">Login</button>
+        </form>
+        <p>New? <a href="registration.html">Register Here</a> | <a href="pphqproject.html">Home</a></p>
+    </div> 
 
-  <!-- FOOTER -->
+    <!-- <div class="form-wrapper">
+        <h2 class="text-center">Login</h2>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+    </div>
+<!-- FOOTER -->
   <div class="footer">
     © 2025 Punjab Police Training Portal | Government of Punjab
   </div>
@@ -184,6 +209,20 @@
   <!-- jQuery Login Script -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
+    fetch('/health')
+    .then(res => res.json()
+      .then(data => {
+        if (res.ok) {
+          alert(data.message);
+        } else {
+          alert(data.message);
+        }
+      })
+    )
+    .catch(err => {
+      console.error('Health check error:', err);
+      alert('Health check failed: could not reach server');
+    });
     $(document).ready(function () {
       $('#loginForm').on('submit', function (e) {
         e.preventDefault();
