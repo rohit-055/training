@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Newlogin</title>
+  <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <title>CCTNS - Punjab Police Training Portal</title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+       </title>
+</head>
+<body>
+
+
+   <div class="watermark-image">
+     <img src="C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\logo.png" alt="watermark-image">
+  </div>
+   <header>
+         <!-- SUB HEADER -->
+          <div class="container-fluid py-2" style="background: linear-gradient(to right, #f28500, #2e7d32);">
+              <div class="row align-items-center">
+                  <!-- Left: Punjab Govt Info -->
+                  <div class="col-md-6 d-flex align-items-center flex-wrap" style="gap: 23px;">
+                      <div class="me-3">
+                          
+                         <span style="font-size: 11px;">ਪੰਜਾਬ ਸਰਕਾਰ</span><br>
+                         <strong>GOVERNMENT OF PUNJAB</strong>
+                     </div>
+                     <div>
+                         <span style="font-size: 11px;">ਪੰਜਾਬ ਪੁਲਿਸ</span><br>
+                         <strong>PUNJAB POLICE</strong>
+                        </div>
+                     <div>
+                          <span>ਤਕਨੀਕੀ ਸੇਵਾਵਾਂ</span><br>
+                          <strong>TECHNICAL SUPPORT SERVICES</strong>
+                     </div>
+                 </div>
+                  <!-- Right: Accessibility Controls -->
+                 <div class="col-md-6 d-flex flex-wrap justify-content-md-end align-items-center">
+                 <a href="#skipcontent" class="text-white px-2">SKIP TO MAIN CONTENT</a>
+                 <span style="font-size: 11px;" class="mx-1">|</span>
+                 <a href="/DigitalPolice/Screen_Reader" class="text-white px-2">SCREEN READER ACCESS</a>
+                 <span style="font-size: 11px;" class="mx-2">|</span>
+                 <a id="iFont" href="#" class="text-white px-2">A+</a>
+                 <span style="font-size: 11px;" class="mx-1">|</span>
+                 <a id="rFont" href="#" class="text-white px-2">A</a>
+                 <span style="font-size: 11px;" class="mx-1">|</span>
+                 <a id="dFont" href="#" class="text-white px-2">A-</a>
+                 </div>
+             </div>
+          </div>
+         <div class="logo">
+            <img src="./CCTNS &amp; ICJS Training Portal_files/logo.jpg" alt="Government of Punjab logo with national emblem">
+            <h2>PUNJAB POLICE TRAINING PORTAL</h2>
+             <nav>
+            <!-- <ul>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS%20&%20ICJS%20Training%20Portal.html#">Home</a></li>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/About.html"class="active">ABOUT</a></li>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/CCTNS.html">CCTNS</a></li>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/ICJS.html">ICJS</a></li>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/KHOJ.html">KHOJ</a></li>
+                <li><a href="file:///C:/Users/PPP/Documents/GitHub/training/views/MYPROFILE.html">My Profile</a></li>
+            </ul> -->
+         </nav> 
+         </div>
+     <section class="hero">
+        <h1>PUNJAB POLICE TRAINING PROGRAM</h1>
+        <p>Comprehensive online training for Crime and Criminal Tracking Network &amp; Systems, Interoperable Criminal Justice System and Khoj</p>
+    </section>
+
+<div class="container" id="container">
+  <!-- Sign Up -->
+  <div class="form-container sign-up-container">
+    <form>
+      <h1>Contact Us</h1>
+      <!-- <input type="text" placeholder="Name" /> -->
+      <input type="email" placeholder="Email" />
+      <!-- <input type="password" placeholder="Password" /> -->
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <!-- Sign In -->
+  <div class="form-container sign-in-container">
+    <form id="loginForm" action="/login" method="POST">
+      <h1>Sign In</h1>
+      <input type="text" id="username" name="username" placeholder="Username" required />
+      <input type="password" id="password" name="password" placeholder="Password" required/>
+      <div class="admin_checkbox">
+        <input style="width: 30px;" type="checkbox" id="admin_login" name="adminlogin">
+        <label for="admin_login">Login As Admin</label>
+      </div>
+     <button>Sign In</button>
+    </form>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>If you already have an account, sign in here</p>
+        <button class="ghost" id="signIn">Sign In</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Hello, Friend!</h1>
+        <p>Enter your details for contact us and start your journey</p>
+        <button class="ghost" id="signUp">For Contact Us</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Footer -->
+  <div class="footer">
+    © 2025 Punjab Police Training Portal | Government of Punjab
+  </div>
+<script src="script.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+</body>
+</html>
+
+
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f6f5f7;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+              0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    min-height: 480px;
+    overflow: hidden;
+    margin-top: 40px;
+    z-index: 999;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+form {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+input {
+  background: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+button {
+  border: none;
+  padding: 12px 45px;
+  background-color: #008CBA;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 80ms ease-in;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button.ghost {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  background: #3498db;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+:root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .watermark-image {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-100%,-13%) rotate(-30deg);
+          opacity: 0.20;
+          background-image: url('C:\Users\PPP\Documents\GitHub\training\views\CCTNS & ICJS Training Portal_files\logo.png'); /* Change this path */
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 500px;
+          height: 500px;
+          z-index: 100;
+          pointer-events: none;
+          user-select: none;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .Bg-main {
+            background-color: #9de9ad; /* Punjab Police Blue */
+        }
+        .sub-header {
+            background: linear-gradient(to right, #f28500, #2e7d32); /* saffron to green */
+            color: white;
+            font-size: 8px;
+            font-weight: 500;
+            padding: 8px 20px;
+            display: flex;
+        }   
+
+        .sub-header a {
+          color: white;
+          text-decoration: none;
+        }
+
+        .sub-header a:hover {
+          text-decoration: underline;
+        }
+        .main header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 20px;
+            display: flex;
+            justify-content: space-between;
+         
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .main-header img {
+                height: 50px;
+        }
+
+    
+        .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-start;
+}
+        
+        .logo img {
+            height: 88px;
+        }
+        
+        nav ul {
+                display: flex;
+               list-style: none;
+               gap: 17px;
+              color: #333;
+              font-weight: 500;
+              margin: 5px 29px;
+             text-align: right;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: linear-gradient(to right, #f28500, #2e7d32);
+      
+        }
+        
+        nav a:hover {
+            background-color: var(--secondary);
+            text-decoration: underline;
+        }
+        nav a.active {
+            background-color: var(--secondary);
+            color: white;
+        }
+         .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .hero a:hover {
+            color: var(--dark);
+        }  
+        /*  */
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            color: var(--dark);
+        }
+         /* Footer */
+    .footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                padding-left: 0;
+                margin-top: 0;
+            }
+            .logo img {
+                height: 40px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .sub-header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .sub-header a {
+                margin-bottom: 5px;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding-left: 0;
+            }
+            .logo {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .h2, h2 {
+    font-size: 25px;
+}
+.logo li {
+    font-size: 13px;
+}
+.col-md-6.d-flex.align-items-center.flex-wrap {
+    font-size: 13px;
+}
+.admin_checkbox {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    padding: 5px 0px;
+}
+</style>
+
+
+<script>
+    const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+  container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+  container.classList.remove("right-panel-active");
+});
+
+
+
+fetch('/health')
+    .then(res => res.json()
+      .then(data => {
+        if (res.ok) { 
+          alert(data.message);
+        } else {
+          alert(data.message);
+        }
+      })
+    )
+    .catch(err => {
+      console.error('Health check error:', err);
+      alert('Health check failed: could not reach server');
+    });
+    $(document).ready(function () {
+      $('#loginForm').on('submit', function (e) {
+        e.preventDefault();
+        const username = $('#username').val();
+        const password = $('#password').val();
+
+        $.ajax({
+          url: 'http://localhost:3000/login',
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({ username, password }),
+          success: function (response) {
+            if (response.success) {
+              window.location.href = response.redirect;
+            } else {
+              alert(response.message);
+            }
+          },
+          error: function () {
+            alert('Login request failed');
+          }
+        });
+      });
+    });
+
+</script>
